@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>popup</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      position: relative;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    #popup {
+      display: none;
+    }
+
+    #popup:checked~.popupBox {
+      display: block;
+    }
+
+    #popup~.popupBox {
+      display: none;
+    }
+
+    .popupBox {
+      width: 300px;
+      height: 350px;
+      border: 1px solid #000;
+      padding: 20px;
+      position: absolute;
+      top: 300px;
+      left: 300px;
+    }
+
+    .popupBox .popupLabel {
+      display: flex;
+      justify-content: end;
+    }
+
+    #wingBanner {
+      display: none;
+    }
+
+    #wingBanner:checked~.wingBox {
+      right: 0px;
+    }
+
+    #wingBanner~.wingBox {
+      right: -200px;
+      border: none;
+    }
+
+    #wingBanner:checked~.wingBox .closeBtn {
+      display: block;
+    }
+
+    #wingBanner:checked~.wingBox .openBtn {
+      display: none;
+    }
+
+    #wingBanner~.wingBox .openBtn {
+      display: block;
+    }
+
+    #wingBanner~.wingBox .closeBtn {
+      display: none;
+    }
+
+    .wingBox {
+      position: absolute;
+      top: 200px;
+      right: -200px;
+      transition: all 0.5s;
+    }
+
+    .wing {
+      top: 50px;
+      right: 0;
+    }
+
+    .wingBox label {
+      float: left;
+    }
+
+    .wingBox .wing {
+      float: left;
+      width: 200px;
+      height: 500px;
+      box-sizing: border-box;
+      background: #ccc;
+      /* transition: all 0.5s; */
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="popup" checked>
+
+  <div class="popupBox">
+    <div class="popupImg">
+      <img src="./img/popupimg.jpg" alt="popup image(loading)">
+    </div>
+    <label for="popup" class="popupLabel">close</label>
+  </div>
+
+
+  <input type="checkbox" id="wingBanner">
+
+  <aside class="wingBox">
+    <label for="wingBanner" class="closeBtn">close</label>
+    <label for="wingBanner" class="openBtn">open</label>
+    <div class="wing">wing_banner</div>
+  </aside>
+
+</body>
+
+</html>

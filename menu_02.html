@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>menu 02 - hamburger</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    #hamBtn {
+      display: none;
+      width: 50px;
+      height: 50px;
+    }
+
+    #hamBtn:checked~.list {
+      height: 500px;
+    }
+
+    #hamBtn~.list {
+      height: 0;
+    }
+
+    #hamBtn:checked~.lnb .close_btn {
+      display: block;
+    }
+
+    #hamBtn:checked~.lnb .open_btn {
+      display: none;
+    }
+
+    #hamBtn~.lnb .close_btn {
+      display: none;
+    }
+
+    #hamBtn~.lnb .open_btn {
+      display: block;
+    }
+
+    .lnb {}
+
+    .lnb label {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      background-color: #000;
+      color: #ccc;
+      float: left;
+    }
+
+    .lnb ul {
+      width: 1000px;
+      height: 50px;
+      float: left;
+      line-height: 50px;
+      text-align: center;
+    }
+
+
+    .lnb ul li {
+      float: left;
+      width: 200px;
+      height: 50px;
+      background-color: #000;
+      color: #ccc;
+    }
+
+    .list {
+      width: 1050px;
+      height: 0;
+      text-align: center;
+      line-height: 500px;
+      background-color: #ccc;
+      overflow: hidden;
+      transition: all 0.5s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="checkbox" id="hamBtn">
+
+  <nav class="lnb">
+    <label for="hamBtn" class="open_btn">열기</label>
+    <label for="hamBtn" class="close_btn">닫기</label>
+    <ul class="lnb_menu">
+      <li>menu01</li>
+      <li>menu02</li>
+      <li>menu03</li>
+      <li>menu04</li>
+      <li>menu05</li>
+    </ul>
+  </nav>
+  <div class="list">
+    Full_Down_Menu
+  </div>
+</body>
+
+</html>

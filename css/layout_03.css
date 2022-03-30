@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inner_header {
+  width: 1000px;
+  height: 180px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 50px;
+}
+.inner_header .gnb {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.inner_header .gnb ul {
+}
+.inner_header .gnb ul li {
+  float: left;
+  padding: 10px 30px;
+  border: 1px solid #000;
+  transition: 0.5s;
+}
+.inner_header .gnb ul li:hover {
+  background-color: #000;
+  color: #ccc;
+}
+.inner_header .gnb ul li:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.inner_header .gnb ul li:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.inner_header .logo {
+  margin-left: 10px ;
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+}
+.inner_header .lnb {
+  position: absolute;
+  right: 0;
+}
+.inner_header .lnb ul li{
+  float: left;
+  padding: 10px 30px;
+  border: 1px solid #000;
+  transition: 0.5s;
+}
+.inner_header .lnb ul li:hover {
+  background-color: #000;
+  color: #ccc;
+}
+.inner_header .lnb ul li:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.inner_header .lnb ul li:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.container {
+  width: 1000px;
+  margin: 10px auto;
+  overflow: hidden;
+  
+}
+.container .article_sec {
+  float: left;
+  margin-right: 10px;
+}
+.container article {
+  width: 700px;
+  height: 250px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.container article h3 {
+  margin: 20px;
+  font-size: 30px;
+}
+.container article p {
+  margin: 0 20px;
+}
+.container .aside_sec {
+  float: left;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 285px;
+  height: 773px;
+}
+
+.container .aside_sec aside figure {
+  width: 260px;
+  height: 70px;
+  border: 1px solid #000;
+  margin: 10px;
+  position: relative;
+}
+.container .aside_sec aside figure img {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+.container .aside_sec aside figure p {
+  display: block;
+  float: left;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .aside_sec aside figure i {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+footer {
+  width: 1000px;
+  height: 100px;
+  line-height: 100px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+footer div {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 100px;
+}
+#wing_btn {
+  display: none;
+}
+#wing_btn:checked ~.label .close_Btn {
+  display: block;
+}
+#wing_btn:checked ~.label .open_Btn {
+  display: none;
+}
+#wing_btn ~.label .open_Btn {
+  display: block;
+}
+#wing_btn ~.label .close_Btn {
+  display: none;
+}
+#wing_btn:checked ~ .wing_box {
+  width: 300px;
+}
+#wing_btn~ .wing_box {
+  width: 0px;
+}
+.wing_banner {
+  position: absolute;
+  right: 0;
+  top: 500px;
+}
+.wing_banner .label {
+  float: left ;
+}
+.wing_banner .wing_box {
+  float: left;
+  height: 600px;
+  background-color: #ccc;
+  transition: all 0.5s;
+}

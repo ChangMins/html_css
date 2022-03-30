@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>menu tap review</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .travel_section {
+      width: 700px;
+      margin: 100px auto;
+      border-radius: 5%;
+      overflow: hidden;
+    }
+
+    h2 {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Pacifico', cursive;
+      font-size: 50px;
+      text-align: center;
+    }
+
+    #travel_01,
+    #travel_02,
+    #travel_03,
+    #travel_04,
+    #travel_05 {
+      display: none;
+    }
+
+    #travel_01:checked~.list_img .travel_img_01 {
+      display: block;
+    }
+
+    #travel_02:checked~.list_img .travel_img_02 {
+      display: block;
+    }
+
+    #travel_03:checked~.list_img .travel_img_03 {
+      display: block;
+    }
+
+    #travel_04:checked~.list_img .travel_img_04 {
+      display: block;
+    }
+
+    #travel_05:checked~.list_img .travel_img_05 {
+      display: block;
+    }
+
+    #travel_01:checked~.travel_label .lab_01 {
+      background-color: #ccc;
+      color: #000;
+    }
+
+    #travel_02:checked~.travel_label .lab_02 {
+      background-color: #ccc;
+      color: #000;
+    }
+
+    #travel_03:checked~.travel_label .lab_03 {
+      background-color: #ccc;
+      color: #000;
+    }
+
+    #travel_04:checked~.travel_label .lab_04 {
+      background-color: #ccc;
+      color: #000;
+    }
+
+    #travel_05:checked~.travel_label .lab_05 {
+      background-color: #ccc;
+      color: #000;
+    }
+
+    .travel_label {
+      float: left;
+    }
+
+    .travel_label label {
+      display: block;
+      width: 100px;
+      height: 80px;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      line-height: 80px;
+      border-radius: 20% 0 0 20%;
+    }
+
+
+    .list_img figure {
+      width: 600px;
+      height: 400px;
+      display: none;
+      float: left;
+
+    }
+  </style>
+</head>
+
+<body>
+  <section class="travel_section">
+    <h2>travel</h2>
+    <input type="radio" name="travel" id="travel_01" checked>
+    <input type="radio" name="travel" id="travel_02">
+    <input type="radio" name="travel" id="travel_03">
+    <input type="radio" name="travel" id="travel_04">
+    <input type="radio" name="travel" id="travel_05">
+
+    <div class="travel_label">
+      <label for="travel_01" class="lab_01">핀란드</label>
+      <label for="travel_02" class="lab_02">스위스</label>
+      <label for="travel_03" class="lab_03">볼리비아</label>
+      <label for="travel_04" class="lab_04">미국</label>
+      <label for="travel_05" class="lab_05">일본</label>
+    </div>
+
+    <div class="list_img">
+      <figure class="travel_img_01">
+        <img src="./img/travel01.jpg" alt="핀란드사진">
+      </figure>
+      <figure class="travel_img_02">
+        <img src="./img/travel02.jpg" alt="스위스사진">
+      </figure>
+      <figure class="travel_img_03">
+        <img src="./img/travel03.jpg" alt="볼리비아사진">
+      </figure>
+      <figure class="travel_img_04">
+        <img src="./img/travel04.jpg" alt="미국사진">
+      </figure>
+      <figure class="travel_img_05">
+        <img src="./img/travel05.jpg" alt="일본사진">
+      </figure>
+    </div>
+  </section>
+</body>
+
+</html>
