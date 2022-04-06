@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <title>Transition</title>
+  <style>
+    
+    * {margin: 0;padding: 0;}
+    li {list-style: none;}
+    a {text-decoration: none; color:inherit;}
+    .product {
+      width: 1600px;
+      margin: 0 auto;
+    }
+    .product h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+    .product a {
+      display: block;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+    .product ul li{
+      float: left;
+      margin-right: 30px;
+    }
+    .product ul li figure {
+      position: relative;
+      overflow: hidden;
+    }
+    .product ul li figure img {
+      width: 250px;
+      height: 250px;
+    }
+    .product ul li figure .ion {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: all 0.2s;
+    }
+    .product ul li figure .on {
+      width: 250px;
+      height: 250px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      text-align: center;
+      line-height: 250px;
+      font-size: 16px;
+      font-weight: 700;
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      transition: all 0.2s 0.2s;
+    }
+    .product ul li figure:hover .on {
+      bottom: 0;
+    }
+    .product ul li figure:hover .ion {
+      opacity: 1;
+    }
+    .product ul li .txt {
+      margin-top: 10px;
+      text-align: center;
+      line-height: 1.5;
+    }
+  </style>
+</head> 
+<body>
+  <section class="product">
+    <h2>Best Style</h2>
+    <a href="#!"><i class="xi-long-arrow-right"></i>보러 가기</a>
+    <ul>
+      <li>
+        <figure>
+          <img class="img01" src="./img/converse01.jpg" alt="">
+          <img class="img01 ion" src="./img/converse01_on.jpg" alt="">
+          <div class="box01 on">sold out</div>
+        </figure>
+        <div class="txt">
+          <h3>converse</h3>
+          <p>converse chucktaylor 1970's</p>
+        </div>
+      </li>
+      <li>
+        <figure>
+          <img class="img02" src="./img/converse02.jpg" alt="">
+          <img class="img02 ion"src="./img/converse02_on.jpg" alt="">
+          <div class="box02 on">89,000원</div>
+        </figure>
+        <div class="txt">
+          <h3>converse</h3>
+          <p>converse chucktaylor 1970's</p>
+        </div>
+      </li>
+      <li>
+        <figure>
+          <img class="img03" src="./img/converse03.jpg" alt="">
+          <img class="img03 ion" src="./img/converse03_on.jpg" alt="">
+          <div class="box03 on">sold out</div>
+        </figure>
+        <div class="txt">
+          <h3>converse</h3>
+          <p>converse chucktaylor 1970's</p>
+        </div>
+      </li>
+      <li>
+        <figure>
+          <img class="img04" src="./img/converse04.jpg" alt="">
+          <img class="img04 ion" src="./img/converse04_on.jpg" alt="">
+          <div class="box04 on">89,000원</div>
+        </figure>
+        <div class="txt">
+          <h3>converse</h3>
+          <p>converse chucktaylor 1970's</p>
+        </div>
+      </li>
+      <li>
+        <figure>
+          <img class="img05" src="./img/converse05.jpg" alt="">
+          <img class="img05 ion" src="./img/converse05_on.jpg" alt="">
+          <div class="box05 on">89,000원</div>
+        </figure>
+        <div class="txt">
+          <h3>converse</h3>
+          <p>converse chucktaylor 1970's</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+</body> 
+</html>

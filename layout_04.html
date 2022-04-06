@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sns layout</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    li{list-style: none;}
+    .sns {
+      background-color: #ccc;
+      width: 1070px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    .sns ul li figure{
+      float: left;
+      width: 340px;
+    }
+    .sns ul li figure img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      float: left;
+    }
+    .sns ul li figure .figure_txt {
+      width: 220px;
+      float: left;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    .sns ul li figure h3 {
+      background-color: #f00;
+    }
+    .sns ul li figure p{
+      background-color: #ff0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="sns">
+    <ul>
+      <li>
+        <figure>
+          <img src="./hite/img/sns01.jpg" alt="">
+          <div class="figure_txt">
+            <h3>FACEBOOK</h3>
+            <p>진로하이트를 페이스북에서 만나보세요!</p>
+          </div>
+        </figure>
+        <figure>
+          <img src="./hite/img/sns02.jpg" alt="">
+          <div class="figure_txt">
+            <h3>INSTAGRAM</h3>
+            <p>진로하이트를 인스타그램에서 만나보세요!</p>
+          </div>
+        </figure>
+        <figure>
+          <img src="./hite/img/sns03.png" alt="">
+          <div class="figure_txt">
+            <h3>BLOG</h3>
+            <p>진로하이트를 블로그에서 만나보세요!</p>
+          </div>
+        </figure>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

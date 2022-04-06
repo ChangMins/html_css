@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    section {
+      margin: 50px 0;
+    }
+
+    div {
+      background-color: #ff0;
+      width: 300px;
+      height: 200px;
+    }
+
+    span {
+      background-color: #ff0;
+      width: 300px;
+      height: 200px;
+      /* display: block; */
+      display: inline-block;
+      /* float: left; -> inline-block을 사용하면 float 사용 x*/
+    }
+
+    .label {
+      width: 350px;
+      font-size: 0;
+    }
+
+    .label label {
+      /* 인라인 블록으로 생기는 사이사이 여백은 부모요소에 font-size 를 0으로 주고 폰트사이즈를 다시 준다 */
+      width: 100px;
+      height: 50px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      display: inline-block;
+      text-align: center;
+      line-height: 50px;
+      font-size: 16px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .gnb {
+      width: 500px;
+    }
+
+    .gnb li {
+      float: left;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section>
+    <div>box01</div>
+    <div>box02</div>
+    <div>box03</div>
+  </section>
+
+  <section>
+    <span>span01</span>
+    <span>span01</span>
+    <span>span01</span>
+  </section>
+
+  <div class="label">
+    <label class="lab01">label 01</label>
+    <label class="lab01">label 02</label>
+    <label class="lab01">label 03</label>
+  </div>
+
+  <div class="gnb">
+    <ul>
+      <ul>
+        <li><a href="#!">Login</a></li>
+        <li><a href="#!">join</a></li>
+        <li><a href="#!">site_map</a></li>
+        <li><a href="#!">search</a></li>
+      </ul>
+    </ul>
+  </div>
+</body>
+
+</html>
